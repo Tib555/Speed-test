@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed Test</h1>
+    <p>Click the button to test your internet speed!</p>
+    <button id="startTest">Start Test</button>
+    <div class="result" id="results"></div>
+
+    <script>
+        document.getElementById('startTest').onclick = function () {
+            // Генерация случайной скорости от 1 до 4 Гбит/с
+            const speed = (Math.random() * (4 - 1) + 1).toFixed(2);
+            const ping = 2; // Пинг всегда фиксированный
+            // Отображение результата
+            document.getElementById('results').innerHTML = 
+                <p>Ping: ${ping} ms</p>
+                <p>Download Speed: ${speed} Gbps</p>
+            ;
+        };
+    </script>
+</body>
+</html>
